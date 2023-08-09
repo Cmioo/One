@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DE TABLAS DE MULTIPLICAR</h1>
+<hr>
+<script>
+  function saltarlinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir (frase) {
+    document.write(frase);
+    saltarlinea();
+    document.write("<hr>")
+  }
+
+  var multiplic = 1
+
+  imprimir ("WHILE");
+
+  while( multiplic <= 10) {
+
+    imprimir(7 * multiplic );
+
+      multiplic++;
+
+}
+
+  imprimir ("FOR");
+
+  for( var multiplic = 1; multiplic <= 10; multiplic++) {
+
+    imprimir( 5 * multiplic);
+
+  }
+
+
+
+</script>

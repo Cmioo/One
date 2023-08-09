@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DE ADIVINANZA</h1>
+<hr>
+<script>
+  function saltarlinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir (frase) {
+    document.write(frase)
+    saltarlinea()
+    document.write("<hr>")
+  }
+
+
+var intentos = 3;
+var contador = 1;
+
+while (contador <= intentos){
+
+  var numeroPensado = Math.round(Math.random()*10);
+  var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+  if (numeroPensado == numeroLanzado){
+
+    alert("Has acertado, en el intento número " + contador + " el número pensado era " + numeroPensado);
+    break;
+
+  }
+  else {
+    alert("Has fallado, el número pensado era " + numeroPensado)
+    imprimir("Has fallado, el número pensado era " + numeroPensado)
+  }
+
+  contador ++;
+}
+
+  if (numeroPensado == numeroLanzado){
+  imprimir("Has acertado, en el intento número " + contador + " el número pensado era " + numeroPensado);
+
+  }
+  else {
+    imprimir("Has fallado, el número pensado era " + numeroPensado)
+  }
+
+
+
+
+  imprimir("FIN");
+
+
+</script>
