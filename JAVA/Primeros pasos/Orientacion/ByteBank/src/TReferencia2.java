@@ -1,14 +1,14 @@
 public class TReferencia2 {
     public static void main(String[] args) {
         Cliente diego = new Cliente();
-        diego.nombre = "Diego";
-        diego.documento = "45444332";
+        diego.setNombre("Diego");
+        diego.setDocumento("45444332");
+        diego.setTelefono("5566997744");
 
-        Cuenta cuentaDiego = new Cuenta();
-        cuentaDiego.agencia=1;
+        Cuenta cuentaDiego = new Cuenta(2);
         cuentaDiego.titular= diego;
 
-        System.out.println(cuentaDiego.titular.documento);
+        System.out.println(cuentaDiego.titular.getDocumento());
         System.out.println(cuentaDiego.titular);
         System.out.println(diego);
     }    

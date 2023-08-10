@@ -3,16 +3,16 @@ public class EjCrearCuenta {
     public static void main(String[] args) {
         // Variable        =   valor
         //Java genera un id siempre que se genera una nueva cuenta -> 123ABC, es la referencia en la memoria donde se encuentra
-        Cuenta primerCuenta= new Cuenta();
-        primerCuenta.saldo=1000;
+        Cuenta primerCuenta= new Cuenta(1);
+        primerCuenta.depositar(1000);
         //primerCuenta.pais="Mexico"; no va a compilar porque no cuenta con ese variable dentro de la clase
 
-        System.out.println(primerCuenta.saldo);
+        System.out.println(primerCuenta.getSaldo());
         
-        Cuenta segundaCuenta = new Cuenta();
-        segundaCuenta.saldo = 50000;
-        System.out.println(segundaCuenta.saldo);
-        System.out.println(primerCuenta.agencia);
+        Cuenta segundaCuenta = new Cuenta(1);
+        segundaCuenta.depositar(50000);
+        System.out.println(segundaCuenta.getSaldo());
+        System.out.println(primerCuenta.getAgencia());
 
         if( primerCuenta == segundaCuenta){
             System.out.println("Son el mismo objeto");
